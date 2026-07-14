@@ -1,0 +1,17 @@
+.status {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.status button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-border-input);
+  border-radius: 6px;
+  background: var(--color-surface);
+}
+
+.error p {
+  color: var(--color-danger);
+}

@@ -1,0 +1,35 @@
+.form {
+  margin-bottom: 1.25rem;
+}
+
+.form label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form input {
+  flex: 1;
+}
+
+.form button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.form button:disabled {
+  background: #aebfe3;
+  cursor: default;
+}

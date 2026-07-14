@@ -1,0 +1,89 @@
+.wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.table thead th {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  background: #fafbfc;
+}
+
+.table tbody tr {
+  cursor: pointer;
+}
+
+.table tbody tr:hover,
+.table tbody tr:focus-visible {
+  background: var(--color-accent-soft);
+  outline: none;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table td[data-label="Name"] {
+  font-weight: 600;
+}
+
+.table td[data-label="Email"] {
+  color: #5f8b6f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 620px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+  }
+
+  .table tr {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  .table tr:last-child {
+    border-bottom: none;
+  }
+
+  .table td {
+    border: none;
+    padding: 0.25rem 1rem;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-muted);
+    min-width: 5.5rem;
+  }
+}
